@@ -1,0 +1,121 @@
+---
+title: "Práctica 1"
+subtitle: "Presentación hecha con {xaringan}"
+author: "Alejandro Romero González"
+date: "10/25/2021"
+output:
+    xaringan::moon_reader:
+      css: ["default", "tamu-fonts", "shinobi"]
+      nature:
+        highlightStyle: github
+        highlighLine: true
+        countIncrementalSlides: true
+---
+class: inverse
+
+# Mi primera diapositiva
+
+Esto es un texto
+  - Elemento 1
+  - Elemento 2
+  
+  1. Uno
+  2. Dos
+  3. Tres
+  
+---
+
+# Mi segunda diapositiva
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+---
+
+# Diapositiva con links
+
+- Simplemente poner el link: https://cran.r-project.org/
+
+- Usar sintaxis de Rmarkdown: [link a CRAN](https://cran.r-project.org/)
+
+<br/><br/><br/>
+
+- Usar sintaxis de HTML
+<a href="https://cran.r-project.org/">
+  Link a CRAN con a href
+</a>
+
+---
+
+# Diapositiva con código y gráficas de R
+
+```{r, out.width = "300px"}
+library(ggplot2)
+
+ggplot(mpg) +
+    aes(cty, hwy) +
+    geom_point() +
+    ggtitle("Fuel efficiency!")
+```
+
+---
+
+# Diapositiva con imágenes
+
+- Estilo Rmarkdown:
+![Este es Tobías](Imagenes/tobi.png)
+---
+
+- Estilo HTML:
+
+<div align="center">
+<img src="Imagenes/tobi.png" width="650" height="500">
+<br>
+<br>
+Este es Tobías
+</div>
+
+---
+
+class:inverse
+
+# Imagen desde internet
+
+<br>
+<div align="center">
+<img src="https://media.giphy.com/media/Ihf1VjXyflOU6Mhh3l/giphy-downsized-large.gif" width="700" height="400">
+<br>
+<br>
+Fractal de Mandelbrot
+</div>
+
+---
+
+# Dividir la diapositiva en dos y agregar fórmulas en LaTeX
+
+.pull-left[
+<br><br>
+<div align="center">
+<img src="https://media.giphy.com/media/PkKzNQjwPy7GvxZbfe/giphy.gif" width="300" height="300">
+<br><br>
+Agujero negro
+</div>
+
+]
+
+.pull-right[
+<br><br><br><br><br><br><br><br><br>
+Fórmula para hallar la temperatura de un agujero negro:
+
+$$T = \frac{\hbar c^3}{8\pi kGM}$$
+]
+
+---
+
+# ¡Fin!
+
+<br><br>
+<div align="center">
+<img src="https://c.tenor.com/ceR5vRuTcU8AAAAC/bendiciones-jesus.gif" width="700">
+</div>
+
+

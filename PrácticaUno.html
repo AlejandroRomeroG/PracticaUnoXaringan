@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Práctica 1</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Alejandro Romero González" />
+    <meta name="date" content="2021-10-25" />
+    <script src="PrácticaUno_files/header-attrs-2.11/header-attrs.js"></script>
+    <link href="PrácticaUno_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="PrácticaUno_files/remark-css-0.0.1/tamu-fonts.css" rel="stylesheet" />
+    <link href="PrácticaUno_files/remark-css-0.0.1/shinobi.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Práctica 1
+## Presentación hecha con {xaringan}
+### Alejandro Romero González
+### 10/25/2021
+
+---
+
+class: inverse
+
+# Mi primera diapositiva
+
+Esto es un texto
+  - Elemento 1
+  - Elemento 2
+  
+  1. Uno
+  2. Dos
+  3. Tres
+  
+---
+
+# Mi segunda diapositiva
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+---
+
+# Diapositiva con links
+
+- Simplemente poner el link: https://cran.r-project.org/
+
+- Usar sintaxis de Rmarkdown: [link a CRAN](https://cran.r-project.org/)
+
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+
+- Usar sintaxis de HTML
+&lt;a href="https://cran.r-project.org/"&gt;
+  Link a CRAN con a href
+&lt;/a&gt;
+
+---
+
+# Diapositiva con código y gráficas de R
+
+
+```r
+library(ggplot2)
+
+ggplot(mpg) +
+    aes(cty, hwy) +
+    geom_point() +
+    ggtitle("Fuel efficiency!")
+```
+
+&lt;img src="PrácticaUno_files/figure-html/unnamed-chunk-1-1.png" width="300px" /&gt;
+
+---
+
+# Diapositiva con imágenes
+
+- Estilo Rmarkdown:
+![Este es Tobías](Imagenes/tobi.png)
+---
+
+- Estilo HTML:
+
+&lt;div align="center"&gt;
+&lt;img src="Imagenes/tobi.png" width="650" height="500"&gt;
+&lt;br&gt;
+&lt;br&gt;
+Este es Tobías
+&lt;/div&gt;
+
+---
+
+class:inverse
+
+# Imagen desde internet
+
+&lt;br&gt;
+&lt;div align="center"&gt;
+&lt;img src="https://media.giphy.com/media/Ihf1VjXyflOU6Mhh3l/giphy-downsized-large.gif" width="700" height="400"&gt;
+&lt;br&gt;
+&lt;br&gt;
+Fractal de Mandelbrot
+&lt;/div&gt;
+
+---
+
+# Dividir la diapositiva en dos y agregar fórmulas en LaTeX
+
+.pull-left[
+&lt;br&gt;&lt;br&gt;
+&lt;div align="center"&gt;
+&lt;img src="https://media.giphy.com/media/PkKzNQjwPy7GvxZbfe/giphy.gif" width="300" height="300"&gt;
+&lt;br&gt;&lt;br&gt;
+Agujero negro
+&lt;/div&gt;
+
+]
+
+.pull-right[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+Fórmula para hallar la temperatura de un agujero negro:
+
+`$$T = \frac{\hbar c^3}{8\pi kGM}$$`
+]
+
+---
+
+# ¡Fin!
+
+&lt;br&gt;&lt;br&gt;
+&lt;div align="center"&gt;
+&lt;img src="https://c.tenor.com/ceR5vRuTcU8AAAAC/bendiciones-jesus.gif" width="700"&gt;
+&lt;/div&gt;
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlighLine": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
